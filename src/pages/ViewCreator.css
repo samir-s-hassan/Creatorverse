@@ -1,0 +1,26 @@
+/* Container for the single creator view */
+.view-creator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+  }
+  
+  /* Centering the Card component */
+  .view-creator-card {
+    width: 100%;
+    max-width: 600px; /* Limits the card width for better readability on large screens */
+    margin: auto; /* Center horizontally */
+  }
+  
+  /* Optional styling for additional elements if needed */
+  .view-creator-heading {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
