@@ -2,7 +2,7 @@
 
 Submitted by: Samir Hassan
 
-About this web app: **👉🏿 app description here**
+About this web app: Creatorverse is a web app for managing and showcasing content creators. Users can view detailed profiles, update information, add new creators, and remove existing ones. The platform features a responsive design, ensuring a seamless experience across devices. Creatorverse provides an intuitive interface for both managing creator data and exploring content.
 
 Time spent: 5 hours
 
@@ -29,7 +29,9 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you added to improve the site's functionality!
+* [X] Implemented a "Back to home" feature on both the Edit Creator page and the View Creator page
+* [X] Let the user know when a Creator did not have an image available to maintain consistency throughout the different Creator cards
+* [X] On the Edit Creator page, the user is shown the image of the creator
 
 ## Video Walkthrough
 
@@ -46,11 +48,17 @@ GIF created with ...  👉🏿 GIF tool here
 
 ## Notes
 
-Describe any challenges encountered while building the app or any additional context you'd like to add.
+There were a few challenges I encountered. I was having trouble passing in the creator data using useEffect in the App.js file. I know I could've done the fetch calls in the respective Edit, View, Show creator files but this would mean I'd have to code it in each time. To maintain modularity, I coded in the useEffect in the App, then used a function called refreshCreators that would be passed into my add and edit creator files. Therefore, upon change, the refreshCreator would make a call and when we would go back to the Show Creators page. we'd see this update of data.
+
+I also found it difficult to find the best styling for all the cards. Therefore, I stuck with a dynamic card design in which the card's weren't of consistent sizing. Rather, the cards would update based on the size of the data present inside of them. 
+
+I enjoyed using React Router instead of useNavigate(). It is very simple and intuitive to navigate to different web pages using this function.
+
+Lastly, Supabase is a pretty cool UI for making a quick database and connecting it to my React app. I will further explore this in the future.
 
 ## License
 
-Copyright [👉🏿 yyyy] [👉🏿 name of copyright owner]
+Copyright 2024 Samir Hassan
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
