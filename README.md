@@ -4,7 +4,7 @@ Submitted by: Samir Hassan
 
 About this web app: Creatorverse is a web app for managing and showcasing content creators. Users can view detailed profiles, update information, add new creators, and remove existing ones. The platform features a responsive design, ensuring a seamless experience across devices. Creatorverse provides an intuitive interface for both managing creator data and exploring content.
 
-Time spent: 5 hours
+Time spent: 4 hours
 
 ## Required Features
 
