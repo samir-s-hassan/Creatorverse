@@ -37,10 +37,10 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-👉🏿<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+👉🏿 [Watch Video Walkthrough](https://drive.google.com/file/d/1rv40Jxwf9ll7jH9bkKWAel_mOP-YU8Zc/view?usp=sharing)
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  👉🏿 GIF tool here
+Video created with macOS built-in video recording software
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
