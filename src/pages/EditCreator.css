@@ -1,0 +1,59 @@
+/* EditCreator.css */
+/* Container for the EditCreator page */
+.edit-creator-container {
+    padding: 20px;
+  }
+  
+  /* Form styling */
+  .edit-creator-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .edit-creator-form label {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .edit-creator-form input,
+  .edit-creator-form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  .edit-creator-form button {
+    padding: 10px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .edit-creator-form button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
+  
+  /* Image preview styling */
+  .image-preview-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .image-preview {
+    width: 200px; /* Adjust the width as needed */
+    height: 200px; /* Adjust the height as needed */
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  

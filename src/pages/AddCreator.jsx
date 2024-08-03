@@ -1,9 +1,10 @@
+// AddCreator.js
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom';
 import supabase from '../client'; // Adjust the path to your client.js file
-import './AddCreator.css'; // Import the CSS file for styling
+import './AddCreator.css';
 
-function AddCreator() {
+function AddCreator({ refreshCreators }) {
   const [name, setName] = useState('');
   const [url, setUrl] = useState('');
   const [description, setDescription] = useState('');
@@ -11,7 +12,7 @@ function AddCreator() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -28,10 +29,9 @@ function AddCreator() {
       setError('Error adding creator. Please try again.');
       console.error('Error adding creator:', error);
     } else {
-      setTimeout(() => {
-        alert('Successfully added!');
-        navigate('/'); // Redirect to home page after alert
-      }, 1000); // 1 second delay
+      await refreshCreators(); // Refresh the creators list
+      alert('Successfully added!');
+      navigate('/'); // Redirect to home page after alert
     }
   };
 
