@@ -1,10 +1,9 @@
-/* EditCreator.css */
-/* Container for the EditCreator page */
 .edit-creator-container {
     padding: 20px;
+    max-width: 600px;
+    margin: auto;
   }
   
-  /* Form styling */
   .edit-creator-form {
     display: flex;
     flex-direction: column;
@@ -42,18 +41,37 @@
     cursor: not-allowed;
   }
   
-  /* Image preview styling */
-  .image-preview-container {
+  .button-container {
     display: flex;
-    justify-content: center;
+    gap: 10px; /* Space between the buttons */
+    margin-bottom: 20px; /* Space below the buttons */
+  }
+  
+  .image-preview-container {
     margin-bottom: 20px;
   }
   
   .image-preview {
-    width: 200px; /* Adjust the width as needed */
-    height: 200px; /* Adjust the height as needed */
-    object-fit: cover;
-    border: 1px solid #ddd;
+    width: 150px; /* Medium-sized box */
+    height: 150px;
+    object-fit: cover; /* Maintain aspect ratio and cover the box */
     border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .error-message {
+    color: #dc3545;
+    margin: 10px 0;
+    font-size: 1.2em;
+  }
+  
+  .success-message {
+    color: #28a745;
+    margin: 10px 0;
+    font-size: 1.2em;
+  }
+  
+  .back-to-home {
+    margin-top: 20px; /* Space between the form and the back link */
   }
   

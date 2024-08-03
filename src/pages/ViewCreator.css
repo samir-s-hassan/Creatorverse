@@ -1,26 +1,66 @@
-/* Container for the single creator view */
+/* Container for the ViewCreator page */
 .view-creator-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: #f4f4f4;
-    min-height: 100vh;
-  }
-  
-  /* Centering the Card component */
-  .view-creator-card {
-    width: 100%;
-    max-width: 600px; /* Limits the card width for better readability on large screens */
-    margin: auto; /* Center horizontally */
-  }
-  
-  /* Optional styling for additional elements if needed */
-  .view-creator-heading {
-    text-align: center;
-    font-size: 2.5em;
-    color: #333;
-    margin-bottom: 20px;
-    font-family: 'Arial', sans-serif;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.creator-name {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.creator-image-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.creator-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.creator-url {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.creator-url a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.creator-url a:hover {
+  text-decoration: underline;
+}
+
+.creator-description {
+  font-size: 1.2em;
+  text-align: center;
+  max-width: 600px;
+}
+
+.edit-button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.edit-button:hover {
+  background-color: #0056b3;
+}

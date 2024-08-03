@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import supabase from '../client'; // Adjust the path to your client.js file
-import Card from '../components/Card'; // Adjust the path to your Card component
 import './ViewCreator.css'; // Import the CSS file
 
 function ViewCreator() {
@@ -38,14 +37,15 @@ function ViewCreator() {
 
   return (
     <div className="view-creator-container">
-      <div className="view-creator-card">
-        <Card
-          name={creator.name}
-          url={creator.url}
-          description={creator.description}
-          imageURL={creator.imageURL}
-        />
-      </div>
+      <h1 className="creator-name">{creator.name}</h1>
+      {creator.imageURL && (
+        <div className="creator-image-container">
+          <img src={creator.imageURL} alt={creator.name} className="creator-image" />
+        </div>
+      )}
+      <p className="creator-url">URL: <a href={creator.url} target="_blank" rel="noopener noreferrer">{creator.url}</a></p>
+      <p className="creator-description">{creator.description}</p>
+      <Link to={`/edit/${creator.id}`} className="edit-button">Edit Creator</Link>
     </div>
   );
 }

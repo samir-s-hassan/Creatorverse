@@ -1,6 +1,5 @@
-// EditCreator.js
 import React, { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import supabase from '../client'; // Adjust the path to your client.js file
 import './EditCreator.css';
 
@@ -12,7 +11,6 @@ function EditCreator({ refreshCreators }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const navigate = useNavigate();
   const { id } = useParams();
 
   useEffect(() => {
@@ -55,7 +53,29 @@ function EditCreator({ refreshCreators }) {
     } else {
       await refreshCreators(); // Refresh the creators list
       alert('Successfully updated!');
-      navigate('/'); // Redirect to home page after alert
+      window.location.href = '/'; // Redirect to home page
+    }
+  };
+
+  const handleDelete = async () => {
+    const confirmDelete = window.confirm('Are you sure you want to delete this creator?');
+    if (confirmDelete) {
+      setLoading(true);
+      const { data, error } = await supabase
+        .from('creators')
+        .delete()
+        .eq('id', id);
+
+      setLoading(false);
+
+      if (error) {
+        setError('Error deleting creator. Please try again.');
+        console.error('Error deleting creator:', error);
+      } else {
+        await refreshCreators(); // Refresh the creators list
+        alert('Successfully deleted!');
+        window.location.href = '/'; // Redirect to home page
+      }
     }
   };
 
@@ -103,10 +123,16 @@ function EditCreator({ refreshCreators }) {
             onChange={(e) => setImageURL(e.target.value)}
           />
         </label>
-        <button type="submit" disabled={loading}>
-          {loading ? 'Updating...' : 'Update Creator'}
-        </button>
+        <div className="button-container">
+          <button type="submit" disabled={loading}>
+            {loading ? 'Updating...' : 'Save Changes'}
+          </button>
+          <button type="button" onClick={handleDelete} disabled={loading}>
+            {loading ? 'Deleting...' : 'Delete Creator'}
+          </button>
+        </div>
       </form>
+      <Link to="/" className="back-to-home">Back to Home</Link>
     </div>
   );
 }
