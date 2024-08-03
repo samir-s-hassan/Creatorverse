@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import supabase from '../client'; // Adjust the path to your client.js file
 import './ViewCreator.css'; // Import the CSS file
@@ -44,8 +44,16 @@ function ViewCreator() {
         </div>
       )}
       <p className="creator-url">URL: <a href={creator.url} target="_blank" rel="noopener noreferrer">{creator.url}</a></p>
-      <p className="creator-description">{creator.description}</p>
+      <p className="creator-description">Description: {creator.description}</p>
       <Link to={`/edit/${creator.id}`} className="edit-button">Edit Creator</Link>
+      <div>
+        <h1>
+          
+        </h1>
+      </div>
+      <div className="view-creator-header">
+        <Link to="/" className="back-to-home-button">Back to Home</Link>
+      </div>
     </div>
   );
 }

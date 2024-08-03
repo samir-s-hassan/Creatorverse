@@ -12,7 +12,7 @@ function ShowCreators({ creators }) {
   if (creators.length === 0) {
     return (
       <div className="show-creators-container">
-        <h1>Show all Creators</h1>
+        <h1>CREATORVERSE</h1>
         <p>No content creators found.</p>
         <Link to="/add" className="add-creator-button">
           Add New Creator
@@ -27,7 +27,7 @@ function ShowCreators({ creators }) {
   // Render the list of creators
   return (
     <div className="show-creators-container">
-      <h1>Show all Creators</h1>
+      <h1>CREATORVERSE</h1>
       <Link to="/add" className="add-creator-button">
         Add New Creator
       </Link>
