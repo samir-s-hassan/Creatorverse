@@ -37,7 +37,7 @@ function ShowCreators({ creators }) {
       <div className="creators-list">
         {creators.map((creator) => (
           <Card
-            key={creator.id}
+            id={creator.id}
             name={creator.name}
             url={creator.url}
             description={creator.description}
