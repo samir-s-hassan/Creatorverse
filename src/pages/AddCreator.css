@@ -1,0 +1,52 @@
+/* Container for the AddCreator page */
+  /* Form styling */
+  .add-creator-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .add-creator-form label {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .add-creator-form input,
+  .add-creator-form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  .add-creator-form button {
+    padding: 10px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .add-creator-form button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
+  
+  /* Success and error messages */
+  .success-message {
+    color: #28a745;
+    margin: 10px 0;
+    font-size: 1.2em;
+  }
+  
+  .error-message {
+    color: #dc3545;
+    margin: 10px 0;
+    font-size: 1.2em;
+  }
+  

@@ -1,10 +1,4 @@
 /* Container for the ShowCreators page */
-.show-creators-container {
-    padding: 20px;
-    background-color: #f4f4f4;
-    min-height: 100vh;
-    text-align: center;
-  }
   
   /* Title styling */
   .show-creators-title {
