@@ -48,9 +48,9 @@ GIF created with ...  👉🏿 GIF tool here
 
 ## Notes
 
-There were a few challenges I encountered. I was having trouble passing in the creator data using useEffect in the App.js file. I know I could've done the fetch calls in the respective Edit, View, Show creator files but this would mean I'd have to code it in each time. To maintain modularity, I coded in the useEffect in the App, then used a function called refreshCreators that would be passed into my add and edit creator files. Therefore, upon change, the refreshCreator would make a call and when we would go back to the Show Creators page. we'd see this update of data.
+There were a few challenges I encountered. I was having trouble passing in the creator data using useEffect in the App.js file. I know I could've done the fetch calls in the respective Edit, View, Show creator files but this would mean I'd have to code it in each time. To maintain modularity, I coded in the useEffect function in the App.js, then used a function called refreshCreators that would be passed into my Add and Edit Creator files. Therefore, upon change, the refreshCreator would make a call to the fetchCreators and when we would go back to the Show Creators page, we would see this update of data.
 
-I also found it difficult to find the best styling for all the cards. Therefore, I stuck with a dynamic card design in which the card's weren't of consistent sizing. Rather, the cards would update based on the size of the data present inside of them. 
+I also found it difficult to find the best styling for all the cards. Therefore, I stuck with a dynamic card design in which the cards weren't of consistent sizing. Rather, the cards would update based on the size of the data present inside of them. 
 
 I enjoyed using React Router instead of useNavigate(). It is very simple and intuitive to navigate to different web pages using this function.
 
