@@ -33,6 +33,11 @@ The following **additional** features are implemented:
 * [X] Let the user know when a Creator did not have an image available to maintain consistency throughout the different Creator cards
 * [X] On the Edit Creator page, the user is shown the image of the creator
 
+## How to run
+
+1. Run "npm run dev" to launch the app on a localhost within your browser
+2. Use the app!
+
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
